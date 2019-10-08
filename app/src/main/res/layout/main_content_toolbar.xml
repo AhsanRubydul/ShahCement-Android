@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#ffffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.Toolbar
+        android:theme="@style/AppTheme.PopupOverlay"
+        android:id="@+id/toolbar"
+        android:background="@drawable/actionbar"
+        android:layout_width="fill_parent"
+        android:layout_height="?android:actionBarSize"
+        xmlns:android="http://schemas.android.com/apk/res/android" />
+</LinearLayout>

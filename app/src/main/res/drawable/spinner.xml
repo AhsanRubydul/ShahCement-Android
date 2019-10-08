@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list android:oneshot="false"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_00" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_01" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_02" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_03" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_04" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_05" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_06" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_07" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_08" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_09" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_10" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_11" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_12" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_13" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_14" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_15" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_16" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_17" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_18" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_19" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_20" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_21" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_22" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_23" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_24" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_25" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_26" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_27" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_28" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_29" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_30" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_31" />
+    <item android:duration="60" android:drawable="@drawable/loader_shahcement_32" />
+</animation-list>

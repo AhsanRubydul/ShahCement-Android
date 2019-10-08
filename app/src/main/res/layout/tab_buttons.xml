@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@+id/tab_buttons_layout_id"
+    android:background="@color/tab_buttons_bg_color"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/tab_buttons_height"
+    android:weightSum="3.0"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/tab_btn_lokkhoniyo_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tab_buttons_margin_left"
+        android:layout_marginTop="@dimen/tab_button_margin_top"
+        android:layout_marginRight="@dimen/tab_button_margin_center"
+        android:layout_marginBottom="@dimen/tab_button_margin_bottonm"
+        android:src="@drawable/tab_btn_lokkhoniyo"
+        android:layout_weight="1.0"
+        android:onClick="lokkhonioClick"
+        android:alpha="0.4"/>
+
+    <ImageView
+        android:id="@+id/tab_btn_video_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tab_button_margin_center"
+        android:layout_marginTop="@dimen/tab_button_margin_top"
+        android:layout_marginRight="@dimen/tab_button_margin_center"
+        android:layout_marginBottom="@dimen/tab_button_margin_bottonm"
+        android:src="@drawable/tab_btn_video"
+        android:layout_weight="1.0"
+        android:onClick="videoClick"
+        android:alpha="0.4"/>
+
+    <ImageView
+        android:id="@+id/tab_btn_question_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/tab_button_margin_center"
+        android:layout_marginTop="@dimen/tab_button_margin_top"
+        android:layout_marginRight="@dimen/tab_button_margin_right"
+        android:layout_marginBottom="@dimen/tab_button_margin_bottonm"
+        android:src="@drawable/tab_btn_question"
+        android:layout_weight="1.0"
+        android:onClick="questionsClick"
+        android:alpha="0.4"/>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="app_theme_color_bg">#ffe2e2e2</color>
+    <color name="colorPrimary">#ffe8000d</color>
+    <color name="colorPrimaryDark">#ffe8000d</color>
+
+    <color name="drawer_bg_color">#ffe8000d</color>
+    <color name="faq_lokh_color">#ffef0007</color>
+
+    <color name="progress_bar_bg_color">#ff404040</color>
+    <color name="tab_buttons_bg_color">#ff85111c</color>
+</resources>

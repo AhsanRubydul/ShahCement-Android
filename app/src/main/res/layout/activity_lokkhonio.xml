@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include android:id="@+id/toolbar_lokkhonio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        layout="@layout/main_content_toolbar" />
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:id="@+id/pdf_viewer_id_lokh"
+        android:background="@color/progress_bar_bg_color"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/tab_button_group_id_lokh"
+        android:layout_below="@+id/toolbar_lokkhonio" />
+
+    <include
+        android:id="@+id/tab_button_group_id_lokh"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_buttons_height"
+        android:layout_alignParentBottom="true"
+        layout="@layout/tab_buttons" />
+
+</RelativeLayout>

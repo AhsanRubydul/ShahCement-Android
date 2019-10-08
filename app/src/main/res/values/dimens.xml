@@ -1,0 +1,38 @@
+<resources>
+
+    <dimen name="margin_5">5.0dip</dimen>
+    <dimen name="margin_10">10.0dip</dimen>
+    <dimen name="margin_15">15.0dip</dimen>
+    <dimen name="margin_2">2.0dip</dimen>
+    <dimen name="margin_20">20.0dip</dimen>
+    <dimen name="margin_30">30.0dip</dimen>
+    <dimen name="margin_35">35.0dip</dimen>
+
+
+    <dimen name="txt_padding_10">10.0dip</dimen>
+    <dimen name="txt_size_10">10.0sp</dimen>
+    <dimen name="txt_size_13">13.0sp</dimen>
+    <dimen name="txt_size_20">20.0sp</dimen>
+    <dimen name="txt_size_25">25.0sp</dimen>
+    <dimen name="txt_size_16">16.0sp</dimen>
+    <dimen name="txt_size_14">14.0sp</dimen>
+
+
+    <dimen name="tab_button_margin_bottonm">7.0dip</dimen>
+    <dimen name="tab_button_margin_center">2.5dip</dimen>
+    <dimen name="tab_button_margin_right">6.0dip</dimen>
+    <dimen name="tab_button_margin_top">7.0dip</dimen>
+    <dimen name="tab_buttons_height">70.0dip</dimen>
+    <dimen name="tab_buttons_margin_left">6.0dip</dimen>
+
+
+    <dimen name="activity_horizontal_margin">16.0dip</dimen>
+    <dimen name="activity_vertical_margin">16.0dip</dimen>
+    <dimen name="nav_header_height">176.0dip</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+
+    <dimen name="youtube_thumb_height">90.0dip</dimen>
+    <dimen name="youtube_thumb_width">90.0dip</dimen>
+
+</resources>

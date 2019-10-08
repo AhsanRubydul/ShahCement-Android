@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="btn_images">
+        <item>@drawable/btn_design</item>
+        <item>@drawable/btn_examine</item>
+        <item>@drawable/btn_site</item>
+        <item>@drawable/btn_piling</item>
+        <item>@drawable/btn_foundation</item>
+        <item>@drawable/btn_shuttering</item>
+        <item>@drawable/btn_placement</item>
+        <item>@drawable/btn_gathni</item>
+        <item>@drawable/btn_dhalay</item>
+        <item>@drawable/btn_plastaring</item>
+        <item>@drawable/btn_curing</item>
+        <item>@drawable/btn_brick</item>
+        <item>@drawable/btn_dust</item>
+        <item>@drawable/btn_khoya</item>
+        <item>@drawable/btn_stone</item>
+        <item>@drawable/btn_water</item>
+        <item>@drawable/btn_cement</item>
+        <item>@drawable/btn_rod</item>
+        <item>@drawable/btn_concret</item>
+        <item>@drawable/btn_readymixconcret</item>
+        <item>@drawable/btn_wood</item>
+        <item>@drawable/btn_tiles</item>
+        <item>@drawable/btn_marble</item>
+        <item>@drawable/btn_painting</item>
+        <item>@drawable/btn_aluminium</item>
+        <item>@drawable/btn_sanitary</item>
+        <item>@drawable/btn_electric</item>
+        <item>@drawable/btn_fire</item>
+        <item>@drawable/btn_eartquake</item>
+    </array>
+    <string-array name="faq_pdf">
+        <item>design_faq.pdf</item>
+        <item>soil_test_faq.pdf</item>
+        <item>site_preperation_faq.pdf</item>
+        <item>N/A</item>
+        <item>foundation_faq.pdf</item>
+        <item>formwork_faq.pdf</item>
+        <item>rod_badhai_faq.pdf</item>
+        <item>gathuni_faq.pdf</item>
+        <item>concrete_dhalai_faq.pdf</item>
+        <item>plaster_faq.pdf</item>
+        <item>curing_faq.pdf</item>
+        <item>iter_kotha_faq.pdf</item>
+        <item>bali_faq.pdf</item>
+        <item>khoa_faq.pdf</item>
+        <item>stone_faq.pdf</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>rod_faq.pdf</item>
+        <item>concrete_faq.pdf</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+    </string-array>
+    <string-array name="lokkhoniyo_pdf">
+        <item>design_lokh.pdf</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>foundation_lokh.pdf</item>
+        <item>formwork_lokh.pdf</item>
+        <item>rod_badhai_lokh.pdf</item>
+        <item>gathuni_lokh.pdf</item>
+        <item>concrete_dhalai_lokh.pdf</item>
+        <item>N/A</item>
+        <item>curing_lokh.pdf</item>
+        <item>iter_kotha_lokh.pdf</item>
+        <item>bali_lokh.pdf</item>
+        <item>khoa_lokh.pdf</item>
+        <item>stone_lokh.pdf</item>
+        <item>N/A</item>
+        <item>cement_lokh.pdf</item>
+        <item>rod_lokh.pdf</item>
+        <item>concrete_lokh.pdf</item>
+        <item>readymix_concrete_lokh.pdf</item>
+        <item>N/A</item>
+        <item>tiles_lokh.pdf</item>
+        <item>N/A</item>
+        <item>painting_lokh.pdf</item>
+        <item>N/A</item>
+        <item>N/A</item>
+        <item>electric_lokh.pdf</item>
+        <item>N/A</item>
+        <item>N/A</item>
+    </string-array>
+    <string-array name="main_pdf_array">
+        <item>design_main.pdf</item>
+        <item>soil_test_main.pdf</item>
+        <item>site_preperation_main.pdf</item>
+        <item>piling_main.pdf</item>
+        <item>foundation_main.pdf</item>
+        <item>formwork_main.pdf</item>
+        <item>rod_badhai_main.pdf</item>
+        <item>gathuni_main.pdf</item>
+        <item>concrete_dhalai_main.pdf</item>
+        <item>plaster_main.pdf</item>
+        <item>curing_main.pdf</item>
+        <item>iter_kotha_main.pdf</item>
+        <item>bali_main.pdf</item>
+        <item>khoa_main.pdf</item>
+        <item>stone_main.pdf</item>
+        <item>water_main.pdf</item>
+        <item>cement_main.pdf</item>
+        <item>rod_main.pdf</item>
+        <item>concrete_main.pdf</item>
+        <item>readymix_concrete_main.pdf</item>
+        <item>wood_main.pdf</item>
+        <item>tiles_main.pdf</item>
+        <item>marble_main.pdf</item>
+        <item>painting_main.pdf</item>
+        <item>glass_alumunium_main.pdf</item>
+        <item>sanitary_main.pdf</item>
+        <item>electric_main.pdf</item>
+        <item>fire_main.pdf</item>
+        <item>earthquack_main.pdf</item>
+    </string-array>
+
+    <array name="tab_button_images">
+        <item>@drawable/tab_btn_lokkhoniyo</item>
+        <item>@drawable/tab_btn_video</item>
+        <item>@drawable/tab_btn_question</item>
+    </array>
+
+    <string-array name="video_duration_array">
+        <item>03:21</item>
+        <item>02:15</item>
+        <item>03:57</item>
+        <item>02:18</item>
+        <item>02:42</item>
+        <item>03:05</item>
+        <item>02:28</item>
+        <item>03:11</item>
+        <item>04:03</item>
+        <item>02:17</item>
+        <item>02:35</item>
+        <item>03:21</item>
+        <item>02:58</item>
+        <item>01:45</item>
+        <item>02:21</item>
+        <item>01:16</item>
+        <item>03:36</item>
+        <item>02:27</item>
+        <item>02:47</item>
+        <item>N/A</item>
+        <item>02:27</item>
+        <item>04:57</item>
+        <item>01:50</item>
+        <item>02:27</item>
+        <item>03:28</item>
+        <item>03:48</item>
+        <item>04:37</item>
+        <item>02:27</item>
+        <item>03:41</item>
+    </string-array>
+    <string-array name="video_id_array">
+        <item>a3VMQdVvgdw</item>
+        <item>ZkWP-J5uh48</item>
+        <item>QjcEaOjwF8Q</item>
+        <item>kh_odUoKUqE</item>
+        <item>KpPlRdAzG7k</item>
+        <item>kt5YJXOtXgc</item>
+        <item>MRtRsZNaBmU</item>
+        <item>_SSdrWL8XTg</item>
+        <item>sEBzAcnWncE</item>
+        <item>HDcU-FHcZ3E</item>
+        <item>B7CZ0T17Ti8</item>
+        <item>hZPfaFIIcx8</item>
+        <item>i0U4G5X860Y</item>
+        <item>kkfpkAKYwF0</item>
+        <item>baiVDBJ2pYM</item>
+        <item>hUFhpIgGq3E</item>
+        <item>8Kqvxkgq-M0</item>
+        <item>mVcALz_JWTs</item>
+        <item>9bNpcIsgm8I</item>
+        <item>N/A</item>
+        <item>reUPZAlTPGc</item>
+        <item>lN62_bDVaTM</item>
+        <item>eQxkzvZ3h_Y</item>
+        <item>kyKnnr9W6Xo</item>
+        <item>rV1ElQHzsuA</item>
+        <item>3m8GbDBkelo</item>
+        <item>7DeQQCN66V8</item>
+        <item>2-n_y2RmqjI</item>
+        <item>AGo2TvtxtJo</item>
+    </string-array>
+    <string-array name="video_title_array">
+        <item>Design</item>
+        <item>Soil Test and Digital Survey</item>
+        <item>Site Preparation and Lay-out</item>
+        <item>Pile Foundation</item>
+        <item>Shallow Foundation</item>
+        <item>Formwork/Shuttering</item>
+        <item>Rod Binding and Placement</item>
+        <item>Brick Masonry</item>
+        <item>Placing of Concrete</item>
+        <item>Plastering</item>
+        <item>Curing</item>
+        <item>Types and Quality of Brick</item>
+        <item>Types and Quality of Sand</item>
+        <item>Quality of Brick chips</item>
+        <item>Quality of Stone</item>
+        <item>Water Quality in Construction</item>
+        <item>Cement</item>
+        <item>Structural Steel</item>
+        <item>Making of Concrete</item>
+        <item>Ready Mix Concrete</item>
+        <item>Use of woods</item>
+        <item>Types of Tiles and Usage</item>
+        <item>Marble and Granite</item>
+        <item>Types of Paint and usage</item>
+        <item>Usage of Glass and Aluminum</item>
+        <item>Sanitary ware</item>
+        <item>Electric Works</item>
+        <item>Fire Safety</item>
+        <item>Earthquake Guidelines</item>
+    </string-array>
+</resources>
