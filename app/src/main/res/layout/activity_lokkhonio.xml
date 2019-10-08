@@ -1,31 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
 
-    <include android:id="@+id/toolbar_lokkhonio"
+    <include
+        android:id="@+id/toolbar_lokkhonio"
+        layout="@layout/main_content_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        layout="@layout/main_content_toolbar" />
+        android:layout_alignParentTop="true" />
+
+    <include
+        android:id="@+id/tab_button_group_id_lokh"
+        layout="@layout/tab_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_buttons_height"
+        android:layout_below="@+id/toolbar_lokkhonio" />
 
 
     <com.github.barteksc.pdfviewer.PDFView
         android:id="@+id/pdf_viewer_id_lokh"
-        android:background="@color/progress_bar_bg_color"
-        android:visibility="invisible"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/tab_button_group_id_lokh"
-        android:layout_below="@+id/toolbar_lokkhonio" />
+        android:background="@color/colorWhite"
+        android:layout_below="@+id/tab_button_group_id_lokh"
+        android:visibility="visible" />
 
-    <include
-        android:id="@+id/tab_button_group_id_lokh"
+
+    <View
+        android:id="@+id/bottom_bar"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/tab_buttons_height"
+        android:layout_height="@dimen/margin_55"
         android:layout_alignParentBottom="true"
-        layout="@layout/tab_buttons" />
+        android:background="@drawable/ic_below_toolbar" />
 
 </RelativeLayout>

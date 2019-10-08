@@ -2,7 +2,7 @@
 <LinearLayout
     android:orientation="horizontal"
     android:id="@+id/tab_buttons_layout_id"
-    android:background="@color/tab_buttons_bg_color"
+    android:background="@color/colorPrimary"
     android:layout_width="fill_parent"
     android:layout_height="@dimen/tab_buttons_height"
     android:weightSum="3.0"

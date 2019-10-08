@@ -48,7 +48,6 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
         position = getIntent().getIntExtra(Constants.POSITION, 0);
         preparePdfString();
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_grid_item_details);
         ButterKnife.bind(this);
 

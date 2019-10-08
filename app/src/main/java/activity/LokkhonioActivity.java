@@ -7,12 +7,12 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.github.barteksc.pdfviewer.util.FitPolicy;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -48,7 +48,6 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         final ProgressHUD mProgressHud = ProgressHUD.show(this, "LOADING ...", true);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_lokkhonio);
         ButterKnife.bind(this);
         lokh_pdf = getIntent().getStringArrayExtra(Constants.LOKH_ARRAY);
@@ -65,6 +64,8 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
                             if (mProgressHud.isShowing()) {
                                 overridePendingTransition(R.anim.push_down_in, R.anim.push_down_out);
                                 pdfView.setVisibility(View.VISIBLE);
+
+
                                 mProgressHud.dismiss();
                                 if (!lokh_pdf[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
                                     tab_btn_lokkhoniyo_id.setAlpha((float) 1);
@@ -76,6 +77,7 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
                                 if (!video_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
                                     tab_btn_video_id.setAlpha((float) 1);
                                 }
+
                             }
                         }
                     }).load();

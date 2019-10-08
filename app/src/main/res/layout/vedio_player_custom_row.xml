@@ -12,12 +12,12 @@
 
         <com.google.android.youtube.player.YouTubeThumbnailView
             android:id="@+id/video_thumbnail_image_view_id"
-            android:layout_width="@dimen/youtube_thumb_width"
-            android:layout_height="@dimen/youtube_thumb_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:background="@android:color/darker_gray"
+            android:background="@color/colorWhite"
             android:contentDescription="@string/thumbnail_image_view_desc"
-            android:scaleType="fitXY"
+            android:scaleType="centerCrop"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
