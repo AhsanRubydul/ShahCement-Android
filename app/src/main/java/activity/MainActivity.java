@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity{
         ButterKnife.bind(this);
         setAppBar();
         setMenu();
+        gridView.setVerticalScrollBarEnabled(false);
         gridView.setAdapter(new ImageButtonAdapter(this,
                 getResources().obtainTypedArray(R.array.btn_images)));
         gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

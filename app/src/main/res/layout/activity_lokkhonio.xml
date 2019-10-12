@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
 
@@ -25,8 +25,9 @@
         android:id="@+id/pdf_viewer_id_lokh"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorWhite"
+        android:layout_above="@+id/bottom_bar"
         android:layout_below="@+id/tab_button_group_id_lokh"
+        android:background="@color/colorWhite"
         android:visibility="visible" />
 
 
