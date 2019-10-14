@@ -20,8 +20,8 @@ public class Constants {
     public static final String TYPE = "TYPE";
     public static final int VEDIO_LIST_ACTIVITY = 1002;
     public static final String YOUTUBE_API_KEY = "AIzaSyDC03OfnNeqKvDWG2yW-iYc85CuoZ94AXg";
-    public static final String alertMessage = "এই ভিডিওগুলি ইন্টারনেট ব্যবহার করবে!";
-    public static final String message = "এই ভিডিওটি ইন্টারনেট ব্যবহার করবে!";
+    public static final String alertMessage = "ভিডিওগুলি দেখার সময় ইন্টারনেট চালু রাখুন";
+    public static final String message = "ভিডিও দেখার সময় ইন্টারনেট চালু রাখুন!";
     public static final String negitiveButton = "Deny";
     public static final String positiveButton = "Accept";
     public static final String title = "Warning!!!";

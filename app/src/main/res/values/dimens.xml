@@ -14,6 +14,7 @@
     <dimen name="margin_60">60.0dip</dimen>
     <dimen name="margin_65">65.0dip</dimen>
     <dimen name="margin_70">70.0dip</dimen>
+    <dimen name="margin_160">160.0dip</dimen>
 
 
     <dimen name="txt_padding_10">10.0dip</dimen>

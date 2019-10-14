@@ -17,10 +17,11 @@
             android:adjustViewBounds="true"
             android:background="@color/colorWhite"
             android:contentDescription="@string/thumbnail_image_view_desc"
-            android:scaleType="centerCrop"
+            android:scaleType="centerInside"
             android:src="@mipmap/ic_launcher" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/video_title_label_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -33,6 +34,7 @@
             android:textSize="@dimen/txt_size_16" />
 
         <TextView
+            android:visibility="gone"
             android:id="@+id/video_duration_label_id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
