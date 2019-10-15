@@ -1,6 +1,5 @@
 package activity;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,7 +7,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
+
+import com.shahcement.nirmaneyaami.R;
 
 import java.util.ArrayList;
 

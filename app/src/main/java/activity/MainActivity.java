@@ -2,7 +2,6 @@ package activity;
 import adapt.ImageButtonAdapter;
 import adapt.MenuAdapter;
 import model.MenuModel;
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,12 +15,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.shahcement.nirmaneyaami.R;
 
 import java.util.ArrayList;
 import utills.Constants;

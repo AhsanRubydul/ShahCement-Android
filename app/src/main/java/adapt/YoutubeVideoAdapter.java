@@ -1,6 +1,5 @@
 package adapt;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +11,7 @@ import android.view.ViewGroup;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
+import com.shahcement.nirmaneyaami.R;
 
 import java.util.ArrayList;
 

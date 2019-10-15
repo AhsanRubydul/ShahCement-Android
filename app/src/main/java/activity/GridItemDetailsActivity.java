@@ -1,18 +1,17 @@
 package activity;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.shahcement.nirmaneyaami.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

@@ -1,7 +1,6 @@
 package adapt;
 
 import android.app.Activity;
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.res.TypedArray;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
+
+import com.shahcement.nirmaneyaami.R;
 
 
 public class ImageButtonAdapter extends BaseAdapter {

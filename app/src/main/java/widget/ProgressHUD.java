@@ -1,7 +1,6 @@
 package widget;
 
 import android.app.Dialog;
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Context;
 import android.graphics.drawable.AnimationDrawable;
 import android.view.Gravity;
@@ -9,6 +8,8 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.shahcement.nirmaneyaami.R;
 
 public class ProgressHUD extends Dialog {
 

@@ -1,4 +1,4 @@
-package android.arabin.shahcement.com.shahcement;
+package android.arabin.shahcement.com.nirmaneyaami;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

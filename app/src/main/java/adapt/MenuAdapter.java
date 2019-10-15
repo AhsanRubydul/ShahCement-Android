@@ -2,7 +2,6 @@ package adapt;
 
 import android.app.Activity;
 import activity.MainActivity;
-import android.arabin.shahcement.com.shahcement.R;
 import android.graphics.Typeface;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,6 +9,9 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.shahcement.nirmaneyaami.R;
+
 import model.MenuModel;
 import butterknife.BindView;
 import butterknife.ButterKnife;

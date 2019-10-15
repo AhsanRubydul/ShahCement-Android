@@ -1,11 +1,11 @@
 package adapt;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
 
 import com.google.android.youtube.player.YouTubeThumbnailView;
+import com.shahcement.nirmaneyaami.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

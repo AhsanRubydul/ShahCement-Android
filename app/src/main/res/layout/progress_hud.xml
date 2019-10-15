@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/spinnerImageView"
-        android:layout_width="64sp"
-        android:layout_height="64sp"
+        android:layout_width="@dimen/margin_70"
+        android:layout_height="@dimen/margin_70"
         android:background="@drawable/spinner" />
 
     <TextView

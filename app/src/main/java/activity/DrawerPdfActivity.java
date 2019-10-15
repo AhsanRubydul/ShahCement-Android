@@ -1,6 +1,5 @@
 package activity;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,7 @@ import android.view.WindowManager;
 
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
+import com.shahcement.nirmaneyaami.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

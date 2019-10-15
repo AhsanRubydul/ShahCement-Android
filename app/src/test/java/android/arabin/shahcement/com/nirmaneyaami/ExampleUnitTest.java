@@ -1,4 +1,4 @@
-package android.arabin.shahcement.com.shahcement;
+package android.arabin.shahcement.com.nirmaneyaami;
 
 import org.junit.Test;
 

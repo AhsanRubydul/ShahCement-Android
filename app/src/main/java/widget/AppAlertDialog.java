@@ -1,10 +1,11 @@
 package widget;
 
 import android.app.AlertDialog;
-import android.arabin.shahcement.com.shahcement.R;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
+
+import com.shahcement.nirmaneyaami.R;
 
 public class AppAlertDialog{
 

@@ -1,6 +1,5 @@
 package activity;
 
-import android.arabin.shahcement.com.shahcement.R;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
@@ -10,6 +9,7 @@ import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
+import com.shahcement.nirmaneyaami.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
