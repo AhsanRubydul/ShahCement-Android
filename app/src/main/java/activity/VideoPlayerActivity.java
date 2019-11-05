@@ -18,9 +18,6 @@ import utills.Constants;
 public class VideoPlayerActivity extends YouTubeBaseActivity {
 
     private static final String TAG = VideoPlayerActivity.class.getSimpleName();
-    private int activity_code;
-    private int position_act;
-    private String type;
 
     @BindView(R.id.you_tube_player_id)
     YouTubePlayerView youTubePlayerView;
@@ -34,10 +31,16 @@ public class VideoPlayerActivity extends YouTubeBaseActivity {
         ButterKnife.bind(this);
         String[] video_id = getResources().getStringArray(R.array.video_id_array);
         int position = getIntent().getIntExtra(Constants.POSITION, -1);
-        type = getIntent().getStringExtra(Constants.TYPE);
-        activity_code = getIntent().getIntExtra(Constants.ACTIVITY_STRING, -1);
-        position_act = position;
-        initializeYouTubePlayer(video_id[position]);
+
+
+        if (getIntent().getIntExtra(Constants.ACTIVITY_STRING, -1) == Constants.VEDIO_LIST_ACTIVITY) {
+            if (position < 19)
+                initializeYouTubePlayer(video_id[position]);
+            else
+                initializeYouTubePlayer(video_id[position + 1]);
+        } else {
+            initializeYouTubePlayer(video_id[position]);
+        }
     }
 
     private void initializeYouTubePlayer(final String video_id) {
