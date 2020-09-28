@@ -10,9 +10,9 @@ import com.shahcement.nirmaneyaami.R;
 public class AppAlertDialog{
 
     private Context context;
-    private AppAlertDialogListerner appAlertDialogListerner;
+    private AppAlertDialogListener appAlertDialogListerner;
 
-    public void setAppAlertDialogListerner(AppAlertDialogListerner listener){
+    public void setAppAlertDialogListerner(AppAlertDialogListener listener){
         this.appAlertDialogListerner = listener;
     }
 

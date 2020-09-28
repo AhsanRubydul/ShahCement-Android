@@ -13,10 +13,6 @@ import com.shahcement.nirmaneyaami.R;
 
 public class ProgressHUD extends Dialog {
 
-    public ProgressHUD(Context context) {
-        super(context);
-    }
-
     public ProgressHUD(Context context, int theme) {
         super(context, theme);
     }
