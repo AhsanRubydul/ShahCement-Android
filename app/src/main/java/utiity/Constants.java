@@ -28,5 +28,6 @@ public class Constants {
     public static final String SHAH_CEMENT_WEB = "https://www.shahcement.com/";
     //public static final String SHAH_CEMENT_E_SHOP = "https://www.shahcement.com/order-now/";
     public static final String SHAH_CEMENT_E_SHOP = "https://www.shahcement.com/cem-ii/";
+    public static final String SHAH_CEMENT_BLOG = "https://www.nirmaneami.shahcement.com";
 
 }

@@ -46,6 +46,10 @@ public class MoreActivity extends PreBaseActivity {
         binding.ivVideo.setOnClickListener(v -> {
             showVideoList(this);
         });
+
+        binding.ivBlog.setOnClickListener(v -> {
+            showURLInApp(Constants.SHAH_CEMENT_BLOG);
+        });
     }
 
 
