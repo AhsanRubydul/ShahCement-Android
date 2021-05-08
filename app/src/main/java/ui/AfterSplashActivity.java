@@ -8,7 +8,7 @@ import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.shahcement.nirmaneyaami.R;
+import com.shahcement.nirmaneyaamii.R;
 
 
 public class AfterSplashActivity extends AppCompatActivity {

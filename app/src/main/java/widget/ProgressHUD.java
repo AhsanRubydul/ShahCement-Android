@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.shahcement.nirmaneyaami.R;
+import com.shahcement.nirmaneyaamii.R;
 
 public class ProgressHUD extends Dialog {
 

@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
-import com.shahcement.nirmaneyaami.R;
+import com.shahcement.nirmaneyaamii.R;
 
 public class SplashActivity extends AppCompatActivity {
 

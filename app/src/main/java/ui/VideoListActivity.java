@@ -2,13 +2,16 @@ package ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.Window;
-import com.shahcement.nirmaneyaami.R;
+
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.shahcement.nirmaneyaamii.R;
+
 import java.util.ArrayList;
+
 import adapter.YoutubeVideoAdapter;
 import butterknife.BindView;
 import butterknife.ButterKnife;

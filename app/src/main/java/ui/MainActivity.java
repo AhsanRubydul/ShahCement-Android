@@ -5,8 +5,8 @@ import android.os.Handler;
 import android.view.Window;
 import android.widget.Toast;
 
-import com.shahcement.nirmaneyaami.R;
-import com.shahcement.nirmaneyaami.databinding.ActivityMainBinding;
+import com.shahcement.nirmaneyaamii.R;
+import com.shahcement.nirmaneyaamii.databinding.ActivityMainBinding;
 
 import adapter.GridItemAdapter;
 import utiity.Constants;

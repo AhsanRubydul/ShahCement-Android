@@ -31,7 +31,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
-import com.shahcement.nirmaneyaami.R;
+import com.shahcement.nirmaneyaamii.R;
 
 public class WebViewActivity extends PreBaseActivity {
 
