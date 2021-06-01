@@ -14,6 +14,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 import android.webkit.CookieManager;
@@ -30,7 +31,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.shahcement.nirmaneyaamii.R;
 
 public class WebViewActivity extends PreBaseActivity {
@@ -152,16 +155,41 @@ public class WebViewActivity extends PreBaseActivity {
             this.fileMimeType = mimeType;
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (checkSelfPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                        == PackageManager.PERMISSION_GRANTED)
-                    downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
-                else
-                    ActivityCompat.requestPermissions(WebViewActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, EXTERNAL_STORAGE_REQUEST_CODE);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
+                    try {
+                        Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
+                        intent.addCategory("android.intent.category.DEFAULT");
+                        intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
+                        startActivityForResult(intent, EXTERNAL_STORAGE_REQUEST_CODE);
+                    } catch (Exception e) {
+                        Intent intent = new Intent();
+                        intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
+                        startActivityForResult(intent, EXTERNAL_STORAGE_REQUEST_CODE);
+                    }
+                } else {
+                    if (!requestPermissions(EXTERNAL_STORAGE_REQUEST_CODE)) {
+                        downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
+                    }
+                }
             } else
                 downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
         });
 
         loadURL(getIntent());
+    }
+
+    private boolean requestPermissions(int action) {
+        if (ContextCompat.checkSelfPermission(this,
+                Manifest.permission.WRITE_EXTERNAL_STORAGE)
+                != PackageManager.PERMISSION_GRANTED) {
+
+            ActivityCompat.requestPermissions(this,
+                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                    action);
+
+            return true;
+        }
+        return false;
     }
 
     @Override
@@ -228,6 +256,14 @@ public class WebViewActivity extends PreBaseActivity {
             Uri result = intent == null || resultCode != Activity.RESULT_OK ? null : intent.getData();
             mUploadMessage.onReceiveValue(result);
             mUploadMessage = null;
+        } else if (requestCode == EXTERNAL_STORAGE_REQUEST_CODE) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+                if (Environment.isExternalStorageManager()) {
+                    if (!requestPermissions(EXTERNAL_STORAGE_REQUEST_CODE)) {
+                        downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
+                    }
+                }
+            }
         }
     }
 
