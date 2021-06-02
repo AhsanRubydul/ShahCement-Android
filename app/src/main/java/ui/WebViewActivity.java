@@ -4,7 +4,6 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
-import android.app.DownloadManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -13,12 +12,8 @@ import android.graphics.PorterDuff;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
-import android.webkit.CookieManager;
-import android.webkit.URLUtil;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
@@ -27,13 +22,11 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.material.snackbar.Snackbar;
 import com.shahcement.nirmaneyaamii.R;
 
 public class WebViewActivity extends PreBaseActivity {
@@ -48,7 +41,6 @@ public class WebViewActivity extends PreBaseActivity {
 
 
     private MyChromeClient mClient;
-    private final int EXTERNAL_STORAGE_REQUEST_CODE = 102;
     private ProgressBar progressBar;
     private String downloadUrl = "";
     private String contentDescription = "";
@@ -148,33 +140,6 @@ public class WebViewActivity extends PreBaseActivity {
         mClient = new MyChromeClient();
         webview.setWebChromeClient(mClient);
 
-        webview.setDownloadListener((url, userAgent, contentDisposition, mimeType, contentLength) -> {
-            this.downloadUrl = url;
-            this.downloadUserAgent = userAgent;
-            this.contentDescription = contentDisposition;
-            this.fileMimeType = mimeType;
-
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
-                    try {
-                        Intent intent = new Intent(Settings.ACTION_MANAGE_APP_ALL_FILES_ACCESS_PERMISSION);
-                        intent.addCategory("android.intent.category.DEFAULT");
-                        intent.setData(Uri.parse(String.format("package:%s", getApplicationContext().getPackageName())));
-                        startActivityForResult(intent, EXTERNAL_STORAGE_REQUEST_CODE);
-                    } catch (Exception e) {
-                        Intent intent = new Intent();
-                        intent.setAction(Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION);
-                        startActivityForResult(intent, EXTERNAL_STORAGE_REQUEST_CODE);
-                    }
-                } else {
-                    if (!requestPermissions(EXTERNAL_STORAGE_REQUEST_CODE)) {
-                        downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
-                    }
-                }
-            } else
-                downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
-        });
-
         loadURL(getIntent());
     }
 
@@ -223,19 +188,6 @@ public class WebViewActivity extends PreBaseActivity {
         }
     }
 
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode) {
-            case EXTERNAL_STORAGE_REQUEST_CODE:
-                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
-                }
-                return;
-            default:
-                super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-        }
-    }
-
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent intent) {
@@ -256,14 +208,6 @@ public class WebViewActivity extends PreBaseActivity {
             Uri result = intent == null || resultCode != Activity.RESULT_OK ? null : intent.getData();
             mUploadMessage.onReceiveValue(result);
             mUploadMessage = null;
-        } else if (requestCode == EXTERNAL_STORAGE_REQUEST_CODE) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-                if (Environment.isExternalStorageManager()) {
-                    if (!requestPermissions(EXTERNAL_STORAGE_REQUEST_CODE)) {
-                        downloadFile(downloadUrl, downloadUserAgent, contentDescription, fileMimeType);
-                    }
-                }
-            }
         }
     }
 
@@ -288,32 +232,4 @@ public class WebViewActivity extends PreBaseActivity {
             super.onBackPressed();
         }
     }
-
-    /**
-     * Download file from URL based on Mime Type
-     *
-     * @param url,                URL of the file to be download
-     * @param userAgent,          User agent of request
-     * @param contentDisposition, Content description of file to be download
-     * @param mimeType,           MIME type of file to be download
-     */
-    public void downloadFile(final String url, final String userAgent, String contentDisposition, String mimeType) {
-
-        if (TextUtils.isEmpty(url) || TextUtils.isEmpty(userAgent) || TextUtils.isEmpty(contentDisposition) || TextUtils.isEmpty(mimeType))
-            return;
-
-        DownloadManager.Request request = new DownloadManager.Request(Uri.parse(url));
-        request.setMimeType(mimeType);
-        String cookies = CookieManager.getInstance().getCookie(url);
-        request.addRequestHeader("cookie", cookies);
-        request.addRequestHeader("User-Agent", userAgent);
-        request.setDescription("Downloading file...");
-        request.setTitle(URLUtil.guessFileName(url, contentDisposition, mimeType));
-        request.allowScanningByMediaScanner();
-        request.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-        request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, URLUtil.guessFileName(url, contentDisposition, mimeType));
-        DownloadManager dm = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
-        dm.enqueue(request);
-    }
-
 }
