@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 30
     defaultConfig {
-        applicationId "com.shahcement.nirmaneyaamii"
+        applicationId "com.shahcement.nirmaneyaami"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 9
-        versionName "2.3"
+        versionCode 11
+        versionName "2.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
