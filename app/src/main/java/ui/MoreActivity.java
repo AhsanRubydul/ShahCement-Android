@@ -3,7 +3,7 @@ package ui;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.shahcement.nirmaneyaamii.databinding.ActivityMoreBinding;
+import com.shahcement.nirmaneyaami.databinding.ActivityMoreBinding;
 
 import utiity.Constants;
 

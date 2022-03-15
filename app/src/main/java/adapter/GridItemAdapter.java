@@ -10,7 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
 
-import com.shahcement.nirmaneyaamii.R;
+import com.shahcement.nirmaneyaami.R;
 
 import utiity.Helper;
 

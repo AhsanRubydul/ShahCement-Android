@@ -5,7 +5,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Build;
 
-import com.shahcement.nirmaneyaamii.R;
+import com.shahcement.nirmaneyaami.R;
 
 public class AppAlertDialog{
 

@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubeThumbnailLoader;
 import com.google.android.youtube.player.YouTubeThumbnailView;
-import com.shahcement.nirmaneyaamii.R;
+import com.shahcement.nirmaneyaami.R;
 
 import java.util.ArrayList;
 

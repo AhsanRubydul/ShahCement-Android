@@ -27,7 +27,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.shahcement.nirmaneyaamii.R;
+import com.shahcement.nirmaneyaami.R;
 
 public class WebViewActivity extends PreBaseActivity {
 
