@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 33
     defaultConfig {
         applicationId "com.shahcement.nirmaneyaami"
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 11
-        versionName "2.5"
+        targetSdkVersion 33
+        versionCode 12
+        versionName "2.6"
+        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     lintOptions {
@@ -48,6 +49,7 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
 
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.support:multidex:2.0.1'
 
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.1.3'

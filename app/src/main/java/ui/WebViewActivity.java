@@ -71,7 +71,7 @@ public class WebViewActivity extends PreBaseActivity {
 
         webview.getSettings().setDomStorageEnabled(true);
         webview.getSettings().setJavaScriptEnabled(true);
-        webview.getSettings().setAppCacheEnabled(true);
+        //webview.getSettings().setAppCacheEnabled(true);
         webview.getSettings().setDatabaseEnabled(true);
         webview.getSettings().setGeolocationDatabasePath(getFilesDir().getPath());
         webview.getSettings().setAllowFileAccess(true);
