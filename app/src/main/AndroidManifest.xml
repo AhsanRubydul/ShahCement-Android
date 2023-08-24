@@ -43,6 +43,7 @@
             android:name="ui.VideoListActivity"
             android:screenOrientation="portrait" />
         <activity android:name="ui.VideoPlayerActivity" />
+        <activity android:name="ui.YouTubePlayerActivity" />
         <activity
             android:name="ui.AfterSplashActivity"
             android:screenOrientation="portrait" />

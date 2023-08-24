@@ -43,7 +43,7 @@ public class VideoListActivity extends PreBaseActivity {
         recyclerView.addOnItemTouchListener(new RecyclerViewOnClickListener(this, new RecyclerViewOnClickListener.OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                Intent intent = new Intent(VideoListActivity.this, VideoPlayerActivity.class);
+                Intent intent = new Intent(VideoListActivity.this, YouTubePlayerActivity.class);
                 intent.putExtra(Constants.POSITION, position);
                 intent.putExtra(Constants.ACTIVITY_STRING, Constants.VEDIO_LIST_ACTIVITY);
                 startActivity(intent);

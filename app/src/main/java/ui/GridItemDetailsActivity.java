@@ -148,7 +148,7 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
         dialog.setAppAlertDialogListerner(new AppAlertDialogListener() {
             @Override
             public void didPressPositiveButton() {
-                Intent intent = new Intent(GridItemDetailsActivity.this, VideoPlayerActivity.class);
+                Intent intent = new Intent(GridItemDetailsActivity.this, YouTubePlayerActivity.class);
                 intent.putExtra(Constants.POSITION, position);
                 intent.putExtra(Constants.ACTIVITY_STRING, 1001);
                 startActivity(intent);

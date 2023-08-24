@@ -193,7 +193,7 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
         dialog.setAppAlertDialogListerner(new AppAlertDialogListener() {
             @Override
             public void didPressPositiveButton() {
-                Intent intent = new Intent(LokkhonioActivity.this, VideoPlayerActivity.class);
+                Intent intent = new Intent(LokkhonioActivity.this, YouTubePlayerActivity.class);
                 intent.putExtra(Constants.POSITION, position);
                 intent.putExtra(Constants.ACTIVITY_STRING, 1001);
                 startActivity(intent);
