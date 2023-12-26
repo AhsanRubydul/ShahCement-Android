@@ -125,6 +125,40 @@
         <item>earthquack_main.pdf</item>
     </string-array>
 
+    <string-array name="audio_file_array">
+        <item>audio_01.mp3</item>
+        <item>audio_02.mp3</item>
+        <item>audio_03.mp3</item>
+        <item>audio_04.mp3</item>
+        <item>audio_05.mp3</item>
+        <item>audio_06.mp3</item>
+        <item>audio_07.mp3</item>
+        <item>audio_08.mp3</item>
+        <item>audio_09.mp3</item>
+        <item>audio_10.mp3</item>
+        <item>audio_11.mp3</item>
+        <item>audio_12.mp3</item>
+        <item>audio_13.mp3</item>
+        <item>audio_14.mp3</item>
+        <item>audio_15.mp3</item>
+        <item>audio_16.mp3</item>
+        <item>audio_17.mp3</item>
+        <item>audio_18.mp3</item>
+        <item>audio_19.mp3</item>
+        <item>audio_20.mp3</item>
+        <item>audio_21.mp3</item>
+        <item>audio_22.mp3</item>
+        <item>audio_23.mp3</item>
+        <item>audio_24.mp3</item>
+        <item>audio_25.mp3</item>
+        <item>audio_26.mp3</item>
+        <item>audio_27.mp3</item>
+        <item>audio_28.mp3</item>
+        <item>audio_29.mp3</item>
+
+
+    </string-array>
+
     <array name="tab_button_images">
         <item>@drawable/tab_btn_lokkhoniyo</item>
         <item>@drawable/tab_btn_video</item>

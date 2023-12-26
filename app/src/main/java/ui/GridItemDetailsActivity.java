@@ -1,13 +1,16 @@
 package ui;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.github.barteksc.pdfviewer.PDFView;
 import com.github.barteksc.pdfviewer.listener.OnLoadCompleteListener;
 import com.shahcement.nirmaneyaami.R;
@@ -15,6 +18,8 @@ import com.shahcement.nirmaneyaami.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import utiity.Constants;
+import utiity.Helper;
+import utiity.MyMediaPlayer;
 import widget.AppAlertDialog;
 import widget.AppAlertDialogListener;
 import widget.ProgressHUD;
@@ -25,6 +30,7 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
     private String[] lokkhoniyo_pdf;
     private String[] main_pdf;
     private String[] video_id;
+    private String[] audio_id;
     private int position;
 
     @BindView(R.id.pdf_viewer_id)
@@ -38,6 +44,11 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
 
     @BindView(R.id.tab_btn_video_id)
     ImageView tab_btn_video_id;
+
+    @BindView(R.id.tab_btn_audio_id)
+    ImageView tab_btn_audio_id;
+
+    MyMediaPlayer myMediaPlayer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,8 +82,11 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
                         if (!video_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
                             tab_btn_video_id.setAlpha((float) 1);
                         }
-
-
+                        if (!audio_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
+                            tab_btn_audio_id.setAlpha((float) 1);
+                            myMediaPlayer = MyMediaPlayer.getInstance();
+                            myMediaPlayer.init(getApplicationContext());
+                        }
                     }
                 }).load();
             }
@@ -81,6 +95,7 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
         tab_btn_video_id.setOnClickListener(this);
         tab_btn_lokkhoniyo_id.setOnClickListener(this);
         tab_btn_question_id.setOnClickListener(this);
+        tab_btn_audio_id.setOnClickListener(this);
     }
 
 
@@ -89,6 +104,7 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
         lokkhoniyo_pdf = getResources().getStringArray(R.array.lokkhoniyo_pdf);
         faq_pdf = getResources().getStringArray(R.array.faq_pdf);
         video_id = getResources().getStringArray(R.array.video_id_array);
+        audio_id = getResources().getStringArray(R.array.audio_file_array);
     }
 
     @Override
@@ -117,6 +133,10 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
                 } else {
                     videoClick(v);
                 }
+                break;
+
+            case R.id.tab_btn_audio_id:
+                audiosClick(v, position);
                 break;
         }
     }
@@ -158,6 +178,11 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
 
     public void onBackPressed() {
         finish();
+    }
+
+    private void audiosClick(View v, int position) {
+        MyMediaPlayer.playAudio(audio_id[position]);
+
     }
 
 }

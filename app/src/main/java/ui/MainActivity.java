@@ -10,6 +10,7 @@ import com.shahcement.nirmaneyaami.databinding.ActivityMainBinding;
 
 import adapter.GridItemAdapter;
 import utiity.Constants;
+import utiity.MyMediaPlayer;
 
 public class MainActivity extends PreBaseActivity {
 
@@ -57,6 +58,8 @@ public class MainActivity extends PreBaseActivity {
     @Override
     public void onBackPressed() {
         if (this.doubleBackToExitPressedOnce) {
+            MyMediaPlayer myMediaPlayer = MyMediaPlayer.getInstance();
+            myMediaPlayer.stopPlayer();
             super.onBackPressed();
             return;
         }
