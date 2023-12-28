@@ -17,6 +17,7 @@ import com.shahcement.nirmaneyaami.R;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import utiity.Constants;
+import utiity.MyMediaPlayer;
 import widget.AppAlertDialog;
 import widget.AppAlertDialogListener;
 import widget.ProgressHUD;
@@ -26,6 +27,7 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
     private String[] faq_pdf;
     private String[] lokh_pdf;
     private String[] video_id;
+    private String[] audio_id;
 
     @BindView(R.id.pdf_viewer_id_lokh)
     PDFView pdfView;
@@ -38,6 +40,11 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
 
     @BindView(R.id.tab_btn_video_id)
     ImageView tab_btn_video_id;
+
+    @BindView(R.id.tab_btn_audio_id)
+    ImageView tab_btn_audio_id;
+
+    MyMediaPlayer myMediaPlayer;
 
     private String type;
     private int position;
@@ -53,6 +60,7 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
         lokh_pdf = getIntent().getStringArrayExtra(Constants.LOKH_ARRAY);
         faq_pdf = getIntent().getStringArrayExtra(Constants.FAQ_ARRAY);
         video_id = getIntent().getStringArrayExtra(Constants.VIDEO_ARRAY);
+        audio_id = getResources().getStringArray(R.array.audio_file_array);
         type = getIntent().getStringExtra(Constants.TYPE);
         position = getIntent().getIntExtra(Constants.POSITION, -1);
         if (type.equalsIgnoreCase(Constants.FAQ)) {
@@ -77,7 +85,11 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
                                 if (!video_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
                                     tab_btn_video_id.setAlpha((float) 1);
                                 }
-
+                                if (!audio_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
+                                    tab_btn_audio_id.setAlpha((float) 1);
+                                    myMediaPlayer = MyMediaPlayer.getInstance();
+                                    myMediaPlayer.init(getApplicationContext());
+                                }
                             }
                         }
                     }).load();
@@ -103,6 +115,11 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
                                 if (!video_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
                                     tab_btn_video_id.setAlpha((float) 1);
                                 }
+                                if (!audio_id[position].equalsIgnoreCase(Constants.NOT_APPLICABLE)) {
+                                    tab_btn_audio_id.setAlpha((float) 1);
+                                    myMediaPlayer = MyMediaPlayer.getInstance();
+                                    myMediaPlayer.init(getApplicationContext());
+                                }
                             }
                         }
                     }).load();
@@ -113,7 +130,7 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
         tab_btn_video_id.setOnClickListener(this);
         tab_btn_lokkhoniyo_id.setOnClickListener(this);
         tab_btn_question_id.setOnClickListener(this);
-
+        tab_btn_audio_id.setOnClickListener(this);
     }
 
     @Override
@@ -143,6 +160,9 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
                 } else {
                     videoClick(v);
                 }
+                break;
+            case R.id.tab_btn_audio_id:
+                audiosClick(v, position);
                 break;
             default:
                 break;
@@ -200,5 +220,10 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
             }
         });
     }
+
+    private void audiosClick(View v, int position) {
+        MyMediaPlayer.playAudio(audio_id[position]);
+    }
+
 
 }

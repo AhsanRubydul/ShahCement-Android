@@ -182,7 +182,6 @@ public class GridItemDetailsActivity extends AppCompatActivity implements View.O
 
     private void audiosClick(View v, int position) {
         MyMediaPlayer.playAudio(audio_id[position]);
-
     }
 
 }
