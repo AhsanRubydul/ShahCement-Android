@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.shahcement.nirmaneyaami.R;
 
 import utiity.Constants;
+import utiity.MyMediaPlayer;
 import widget.AppAlertDialog;
 
 /**
@@ -67,5 +68,12 @@ public class PreBaseActivity extends AppCompatActivity {
 
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    @Override
+    protected void onDestroy() {
+        MyMediaPlayer myMediaPlayer = MyMediaPlayer.getInstance();
+        myMediaPlayer.stopPlayer();
+        super.onDestroy();
     }
 }

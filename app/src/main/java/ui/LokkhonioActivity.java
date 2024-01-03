@@ -22,7 +22,7 @@ import widget.AppAlertDialog;
 import widget.AppAlertDialogListener;
 import widget.ProgressHUD;
 
-public class LokkhonioActivity extends AppCompatActivity implements View.OnClickListener {
+public class LokkhonioActivity extends PreBaseActivity implements View.OnClickListener {
 
     private String[] faq_pdf;
     private String[] lokh_pdf;
@@ -221,8 +221,17 @@ public class LokkhonioActivity extends AppCompatActivity implements View.OnClick
         });
     }
 
-    private void audiosClick(View v, int position) {
+    private int audiosClick(View v, int position) {
+        boolean isPlaying = MyMediaPlayer.isPlaying();
+
+        if (isPlaying)
+            if (MyMediaPlayer.audioFileName.equalsIgnoreCase(audio_id[position])) {
+                MyMediaPlayer.stopPlayer();
+                return 0;
+            }
+
         MyMediaPlayer.playAudio(audio_id[position]);
+        return 1;
     }
 
 

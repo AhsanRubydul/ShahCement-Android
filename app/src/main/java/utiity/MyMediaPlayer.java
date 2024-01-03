@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 
 public class MyMediaPlayer {
     static MediaPlayer player;
+    public static String audioFileName = "";
     private static MyMediaPlayer myMediaPlayer = new MyMediaPlayer();
     private Context appContext;
 
@@ -30,12 +31,19 @@ public class MyMediaPlayer {
         return appContext;
     }
 
-    public void stopPlayer(){
-        if (player !=null){
+    public static void stopPlayer() {
+        if (player != null) {
             player.stop();
             player.release();
             player = null;
         }
+    }
+
+    public static boolean isPlaying() {
+        if (player != null) {
+            return player.isPlaying();
+        }
+        return false;
     }
 
     public static void playAudio(String fileName) {
@@ -56,6 +64,8 @@ public class MyMediaPlayer {
             player.setVolume(1f, 1f);
             player.setLooping(false);
             player.start();
+
+            audioFileName = fileName;
 
         } catch (Exception exception) {
             exception.printStackTrace();
