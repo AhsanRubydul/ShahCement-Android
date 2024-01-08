@@ -46,6 +46,10 @@ public class MainActivity extends PreBaseActivity {
             sendEmail(Constants.SHAH_CEMENT_EMAIL);
         });
 
+        binding.ivWhatsApp.setOnClickListener(v -> {
+            openWhatApp("+880 1958 075553");
+        });
+
         binding.ivMore.setOnClickListener(v -> {
             showMore();
         });

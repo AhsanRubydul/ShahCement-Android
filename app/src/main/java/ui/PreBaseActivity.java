@@ -2,8 +2,10 @@ package ui;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,8 +29,7 @@ public class PreBaseActivity extends AppCompatActivity {
     public void showVideoList(Context context) {
         AppAlertDialog dialog = new AppAlertDialog(this);
         dialog.showDialog(Constants.title, Constants.alertMessage, Constants.positiveButton, Constants.negativeButton);
-        dialog.setAppAlertDialogListerner(() ->
-                startActivity(new Intent(context, VideoListActivity.class)));
+        dialog.setAppAlertDialogListerner(() -> startActivity(new Intent(context, VideoListActivity.class)));
     }
 
     public void sendEmail(String email) {
@@ -53,11 +54,11 @@ public class PreBaseActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void showView(View view){
+    public void showView(View view) {
         view.setVisibility(View.VISIBLE);
     }
 
-    public void hideView(View view){
+    public void hideView(View view) {
         view.setVisibility(View.GONE);
     }
 
@@ -68,6 +69,16 @@ public class PreBaseActivity extends AppCompatActivity {
 
         startActivity(intent);
         overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left);
+    }
+
+    public void openWhatApp(String number) {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://wa.me/" + number + "/?text=" + ""));
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
