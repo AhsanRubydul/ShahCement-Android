@@ -31,6 +31,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:paddingVertical="@dimen/margin_5"
                 android:id="@+id/ivPhone"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -39,6 +40,7 @@
                 android:src="@drawable/ic_phone" />
 
             <ImageView
+                android:paddingVertical="@dimen/margin_5"
                 android:id="@+id/ivWeb"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -47,6 +49,7 @@
                 android:src="@drawable/ic_web" />
 
             <ImageView
+                android:paddingVertical="@dimen/margin_5"
                 android:id="@+id/ivEmail"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
@@ -55,6 +58,7 @@
                 android:src="@drawable/ic_mail" />
 
             <ImageView
+                android:paddingVertical="@dimen/margin_5"
                 android:id="@+id/ivWhatsApp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"

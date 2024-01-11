@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/app_theme_color_bg">
 
     <include
@@ -35,40 +35,46 @@
                 android:id="@+id/ivPhone"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
+                android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
-                android:src="@drawable/ic_phone"
-                android:layout_marginEnd="16dp" />
+                android:paddingVertical="@dimen/margin_5"
+                android:src="@drawable/ic_phone" />
 
             <ImageView
                 android:id="@+id/ivWeb"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingVertical="@dimen/margin_5"
                 android:src="@drawable/ic_web" />
 
             <ImageView
                 android:id="@+id/ivEmail"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginRight="16dp"
                 android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingVertical="@dimen/margin_5"
                 android:src="@drawable/ic_mail" />
 
             <ImageView
                 android:id="@+id/ivWhatsApp"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:layout_marginRight="16dp"
+                android:layout_gravity="center_vertical"
                 android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingVertical="@dimen/margin_5"
                 android:src="@drawable/ic_whatsapp" />
 
             <ImageView
                 android:id="@+id/ivMore"
-                android:layout_width="48dp"
+                android:layout_width="40dp"
                 android:layout_height="48dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
+                android:paddingVertical="@dimen/margin_5"
                 android:src="@drawable/ic_more" />
 
         </LinearLayout>
@@ -76,8 +82,8 @@
 
     <View
         android:layout_width="8dp"
-        android:layout_below="@+id/layoutGap"
         android:layout_height="match_parent"
+        android:layout_below="@+id/layoutGap"
         android:background="@color/drawer_bg_color" />
 
     <GridView
