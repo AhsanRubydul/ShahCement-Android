@@ -6,8 +6,8 @@ android {
         applicationId "com.shahcement.nirmaneyaami"
         minSdkVersion 16
         targetSdkVersion 33
-        versionCode 14
-        versionName "2.8"
+        versionCode 15
+        versionName "2.9"
         multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
