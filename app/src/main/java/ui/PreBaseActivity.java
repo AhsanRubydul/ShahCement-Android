@@ -87,4 +87,11 @@ public class PreBaseActivity extends AppCompatActivity {
         myMediaPlayer.stopPlayer();
         super.onDestroy();
     }
+    @Override
+    protected void onStop() {
+        MyMediaPlayer myMediaPlayer = MyMediaPlayer.getInstance();
+        myMediaPlayer.stopPlayer();
+        super.onStop();
+    }
+
 }
