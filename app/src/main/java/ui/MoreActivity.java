@@ -36,7 +36,7 @@ public class MoreActivity extends PreBaseActivity {
         });
 
         binding.ivWhatsApp.setOnClickListener(v -> {
-            openWhatApp("+880 1958 075553");
+             openWhatApp("+880 1985 559679");
         });
 
         binding.ivHome.setOnClickListener(v -> {

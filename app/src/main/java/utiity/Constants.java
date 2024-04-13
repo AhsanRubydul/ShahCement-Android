@@ -22,7 +22,7 @@ public class Constants {
     public static final int PROGRESS_DELAY = 3000;
     public static final int PROGRESS_DELAY_SHORT = 500;
 
-    public static final String SHAH_CEMENT_HOT_LINE = "16281";
+    public static final String SHAH_CEMENT_HOT_LINE = "01966661311";
     public static final String SHAH_CEMENT_EMAIL = "shahcement@abulkhairgroup.com";
 
     public static final String SHAH_CEMENT_WEB = "https://www.shahcement.com/";
